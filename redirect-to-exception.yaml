@@ -1,0 +1,9 @@
+name: RedirectToExceptionFunction
+tenant: public
+namespace: default
+jar: /Users/mac/dev/narvar/atlas_forks/pulsar-function/target/pulsar-function-1.0-SNAPSHOT-jar-with-dependencies.jar
+className: com.narvar.pulsar.function.RedirectToExceptionFunction
+inputs:
+- persistent://public/default/my-topic
+output: persistent://public/default/exception-output
+user-config: '{"api_gateway_url":"value-1", "event_codes":"500,700"}'
